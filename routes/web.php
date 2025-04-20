@@ -30,4 +30,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', [SharePostController::class, 'index'])->name('index');
+
+Route::get('/posts/{post}', [SharePostController::class, 'show']);
+
 require __DIR__ . '/auth.php';
